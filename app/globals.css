@@ -1,4 +1,80 @@
 @import "tailwindcss";
-@plugin "daisyui" {
-  themes: light --default, dark --prefersdark, cupcake;
+@plugin "daisyui";
+@plugin "daisyui/theme" {
+  name: "cupcake";
+  default: true;
+  --color-primary: oklch(80.35% 0.1039 125.33);
+  --color-secondary: oklch(23.57% 0.0662 313.19);
+}
+
+@font-face {
+  font-family: "MT Regular";
+  src: url("/fonts/mt-regular.otf") format("opentype");
+}
+.font-mt-regular {
+  font-family: "MT Regular", serif;
+}
+
+@font-face {
+  font-family: "MT IRegular";
+  src: url("/fonts/mt-iregular.otf") format("opentype");
+}
+.font-mt-iregular {
+  font-family: "MT IRegular", serif;
+}
+
+@font-face {
+  font-family: "MT Bold";
+  src: url("/fonts/mt-bold.otf") format("opentype");
+}
+.font-mt-bold {
+  font-family: "MT Bold", serif;
+}
+
+@font-face {
+  font-family: "MT IBold";
+  src: url("/fonts/mt-ibold.otf") format("opentype");
+}
+.font-mt-ibold {
+  font-family: "MT IBold", serif;
+}
+
+@font-face {
+  font-family: "Sohne Regular";
+  src: url("/fonts/sohne-regular.otf") format("opentype");
+}
+.font-sohne-regular {
+  font-family: "Sohne Regular", sans-serif;
+}
+
+@font-face {
+  font-family: "Sohne Medium";
+  src: url("/fonts/sohne-medium.otf") format("opentype");
+}
+.font-sohne-medium {
+  font-family: "Sohne Medium", sans-serif;
+}
+
+@font-face {
+  font-family: "Sohne Bold";
+  src: url("/fonts/sohne-bold.otf") format("opentype");
+}
+.font-sohne-bold {
+  font-family: "Sohne Bold", sans-serif;
+}
+
+@font-face {
+  font-family: "Sohne Heavy";
+  src: url("/fonts/sohne-heavy.otf") format("opentype");
+}
+.font-sohne-heavy {
+  font-family: "Sohne Heavy", sans-serif;
+}
+
+@font-face {
+  font-family: "Sohne Black";
+  src: url("/fonts/sohne-black.otf") format("opentype");
+}
+.font-sohne-black {
+  font-family: "Sohne Black", sans-serif;
 }
