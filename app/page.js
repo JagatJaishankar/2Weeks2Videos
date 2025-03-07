@@ -255,9 +255,7 @@ export default function Home() {
             Could be 100% FREE or could burn a hole in your pocket
             ($14)&mdash;it depends on you
           </div>
-          <button className="btn btn-primary rounded-lg font-sohne-medium text-secondary text-lg p-5 shadow-md">
-            Accept Challenge
-          </button>
+          <AcceptButton />
         </div>
       </section>
       {/* Resources */}

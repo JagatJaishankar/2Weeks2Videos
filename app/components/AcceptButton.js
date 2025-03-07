@@ -44,7 +44,7 @@ function AcceptButton() {
             </p>
 
             {/* Bullet Points */}
-            <p className="font-mt-regular py-3">
+            <p className="font-mt-regular p-3 mb-3">
               ✔️ No 1,000 subs needed (just your 2 videos)
               <br />
               ✔️ Free product + simple upsell strategy
@@ -53,19 +53,14 @@ function AcceptButton() {
               <br />
             </p>
 
-            <p className="font-mt-regular pb-3">
-              <span className="font-mt-bold">🔥 Click YES</span> to start making
-              money from your content now!
-            </p>
-
-            <Link href="/checkout">
+            <Link href="/challenge-helper-pack">
               <button className="btn btn-block btn-primary rounded-lg font-sohne-medium text-secondary text-lg shadow-md">
                 Upgrade My Offer!
               </button>
             </Link>
             <div className="pt-2 text-center">
               <a
-                className="link link-secondary link-hover font-mt-regular"
+                className="link text-gray-500 font-mt-regular"
                 href="https://gumroad.com"
               >
                 No thanks, I’ll figure it out on my own.
