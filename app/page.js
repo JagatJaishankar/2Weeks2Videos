@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import AcceptButton from "./components/AcceptButton";
+
 export default function Home() {
   return (
     <main className="text-secondary">
@@ -39,9 +41,7 @@ export default function Home() {
           Everything you need to build your channel or personal brand&mdash;
           <span className="font-mt-bold">includes motivation</span>
         </div>
-        <button className="btn btn-primary rounded-lg font-sohne-medium text-secondary text-lg p-5 shadow-md">
-          Accept Challenge
-        </button>
+        <AcceptButton />
       </section>
       {/* Growth */}
       <section className="bg-base-200 py-32" id="growth">
