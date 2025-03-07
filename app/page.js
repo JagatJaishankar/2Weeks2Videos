@@ -132,9 +132,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <button className="btn btn-primary rounded-lg font-sohne-medium text-secondary text-lg p-5 shadow-md">
-            Accept Challenge
-          </button>
+          <AcceptButton />
         </div>
       </section>
       {/* Overview */}
@@ -235,9 +233,7 @@ export default function Home() {
             </ul>
           </div>
           <div className="text-center">
-            <button className="btn btn-primary rounded-lg font-sohne-medium text-secondary text-lg p-5 shadow-md">
-              Accept Challenge
-            </button>
+            <AcceptButton />
           </div>
         </div>
       </section>
@@ -288,9 +284,7 @@ export default function Home() {
           className="rounded-2xl shadow-lg mx-auto mb-10"
         />
         <div className="text-center">
-          <button className="btn btn-primary rounded-lg font-sohne-medium text-secondary text-lg p-5 shadow-md">
-            Accept Challenge
-          </button>
+          <AcceptButton />
         </div>
       </section>
       {/* Footer */}
