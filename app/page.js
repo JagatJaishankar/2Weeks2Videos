@@ -252,8 +252,8 @@ export default function Home() {
             You Are...
           </h1>
           <div className="font-mt-regular text-lg mt-4 mb-10 opacity-70">
-            Could be 100% FREE or could burn a hole in your pocket&mdash;it
-            depends on you
+            Could be 100% FREE or could burn a hole in your pocket
+            ($14)&mdash;it depends on you
           </div>
           <button className="btn btn-primary rounded-lg font-sohne-medium text-secondary text-lg p-5 shadow-md">
             Accept Challenge
