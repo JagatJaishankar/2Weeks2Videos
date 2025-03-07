@@ -82,7 +82,7 @@ const ChallengeHelper = () => {
         <div className="mb-2">
           <button className="mt-6 px-6 py-7 btn btn-primary font-sohne-bold text-secondary text-xl max-md:text-lg rounded-lg shadow-md">
             <a href="https://creatorjagat.gumroad.com/l/complete-2w2v?wanted=true">
-              ✅ Get Everything Done for Me!
+              ✅ Get Everything Done For Me!
             </a>
           </button>
         </div>
