@@ -61,9 +61,9 @@ function AcceptButton() {
             <div className="pt-2 text-center">
               <a
                 className="link text-gray-500 font-mt-regular"
-                href="https://gumroad.com"
+                href="https://creatorjagat.gumroad.com/l/2weeks2videos-challenge?wanted=true"
               >
-                No thanks, I’ll figure it out on my own.
+                No thanks, I&apos;ll figure it out on my own.
               </a>
             </div>
           </div>

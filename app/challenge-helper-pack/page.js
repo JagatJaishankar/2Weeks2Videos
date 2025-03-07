@@ -1,4 +1,4 @@
-const UpsellPage = () => {
+const ChallengeHelper = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-6 text-secondary">
       <div className="max-w-3xl text-center">
@@ -81,10 +81,15 @@ const UpsellPage = () => {
         </div>
         <div className="mb-2">
           <button className="mt-6 px-6 py-7 btn btn-primary font-sohne-bold text-secondary text-xl max-md:text-lg rounded-lg shadow-md">
-            ✅ Get Everything Done for Me!
+            <a href="https://creatorjagat.gumroad.com/l/complete-2w2v?wanted=true">
+              ✅ Get Everything Done for Me!
+            </a>
           </button>
         </div>
-        <a className="link text-gray-500 font-mt-regular">
+        <a
+          className="link text-gray-500 font-mt-regular"
+          href="https://creatorjagat.gumroad.com/l/2w2v-blueprint?wanted=true"
+        >
           No thanks, I&apos;ll handle editing, designing, and writing all by
           myself.
         </a>
@@ -93,7 +98,7 @@ const UpsellPage = () => {
   );
 };
 
-export default UpsellPage;
+export default ChallengeHelper;
 
 //  <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6">
 //       <div className="max-w-3xl text-center">
