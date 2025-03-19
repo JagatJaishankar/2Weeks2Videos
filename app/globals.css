@@ -1,80 +1,44 @@
 @import "tailwindcss";
 @plugin "daisyui";
 @plugin "daisyui/theme" {
-  name: "cupcake";
-  default: true;
-  --color-primary: oklch(80.35% 0.1039 125.33);
-  --color-secondary: oklch(23.57% 0.0662 313.19);
+  name: "yellowmadethis";
+  default: false;
+  prefersdark: false;
+  color-scheme: "light";
+  --color-base-100: oklch(97.788% 0.004 56.375);
+  --color-base-200: oklch(93.982% 0.007 61.449);
+  --color-base-300: oklch(91.586% 0.006 53.44);
+  --color-base-content: oklch(18.07% 0.053 264.4);
+  --color-primary: oklch(80.35% 0.104 125.33);
+  --color-primary-content: oklch(18.07% 0.053 264.4);
+  --color-secondary: oklch(69.27% 0.042 169.77);
+  --color-secondary-content: oklch(18.07% 0.053 264.4);
+  --color-accent: oklch(90% 0.076 70.697);
+  --color-accent-content: oklch(31.45% 0.071 63.602);
+  --color-neutral: oklch(18.07% 0.053 264.4);
+  --color-neutral-content: oklch(98.21% 0 0);
+  --color-info: oklch(82% 0.111 230.318);
+  --color-info-content: oklch(18.07% 0.053 264.4);
+  --color-success: oklch(76% 0.233 130.85);
+  --color-success-content: oklch(18.07% 0.053 264.4);
+  --color-warning: oklch(75% 0.183 55.934);
+  --color-warning-content: oklch(30.35% 0.063 82.45);
+  --color-error: oklch(63% 0.237 25.331);
+  --color-error-content: oklch(18.07% 0.053 264.4);
+  --radius-selector: 0.5rem;
+  --radius-field: 1rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 2px;
+  --depth: 0;
+  --noise: 1;
 }
 
-@font-face {
-  font-family: "MT Regular";
-  src: url("/fonts/mt-regular.otf") format("opentype");
-}
-.font-mt-regular {
-  font-family: "MT Regular", serif;
+.font-lora {
+  font-family: "lora";
 }
 
-@font-face {
-  font-family: "MT IRegular";
-  src: url("/fonts/mt-iregular.otf") format("opentype");
-}
-.font-mt-iregular {
-  font-family: "MT IRegular", serif;
-}
-
-@font-face {
-  font-family: "MT Bold";
-  src: url("/fonts/mt-bold.otf") format("opentype");
-}
-.font-mt-bold {
-  font-family: "MT Bold", serif;
-}
-
-@font-face {
-  font-family: "MT IBold";
-  src: url("/fonts/mt-ibold.otf") format("opentype");
-}
-.font-mt-ibold {
-  font-family: "MT IBold", serif;
-}
-
-@font-face {
-  font-family: "Sohne Regular";
-  src: url("/fonts/sohne-regular.otf") format("opentype");
-}
-.font-sohne-regular {
-  font-family: "Sohne Regular", sans-serif;
-}
-
-@font-face {
-  font-family: "Sohne Medium";
-  src: url("/fonts/sohne-medium.otf") format("opentype");
-}
-.font-sohne-medium {
-  font-family: "Sohne Medium", sans-serif;
-}
-
-@font-face {
-  font-family: "Sohne Bold";
-  src: url("/fonts/sohne-bold.otf") format("opentype");
-}
-.font-sohne-bold {
-  font-family: "Sohne Bold", sans-serif;
-}
-
-@font-face {
-  font-family: "Sohne Heavy";
-  src: url("/fonts/sohne-heavy.otf") format("opentype");
-}
-.font-sohne-heavy {
-  font-family: "Sohne Heavy", sans-serif;
-}
-
-@font-face {
-  font-family: "Sohne Black";
-  src: url("/fonts/sohne-black.otf") format("opentype");
-}
-.font-sohne-black {
-  font-family: "Sohne Black", sans-serif;
+.font-outfit {
+  font-family: "outfit";
 }
