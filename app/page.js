@@ -9,7 +9,7 @@ export default function Home() {
       <section className='max-w-3xl mx-auto px-6 pt-3'>
         <div className='navbar bg-base-200 shadow-md rounded-2xl'>
           <div className='flex-1'>
-            <a className='btn btn-ghost text-4xl font-outfit font-extrabold'>
+            <a className='btn btn-ghost text-4xl font-raleway font-black'>
               2W2V
             </a>
           </div>
@@ -58,7 +58,7 @@ export default function Home() {
       </section>
       {/* Hero Section */}
       <section className='max-w-3xl mx-auto px-6 py-32 text-center'>
-        <div className='font-outfit font-extrabold max-md:text-4xl text-5xl leading-tight mb-4'>
+        <div className='font-raleway font-black max-md:text-4xl text-5xl leading-tight mb-4'>
           Become a YouTuber <br className='max-md:hidden' />{" "}
           <span className='relative inline-block'>
             <span className='relative z-10'>in Days, </span>
@@ -78,7 +78,7 @@ export default function Home() {
           <div className='uppercase tracking-widest font-bold opacity-60 text-sm mb-2'>
             journey
           </div>
-          <div className='text-3xl font-outfit font-extrabold leading-tight mb-4'>
+          <div className='text-3xl font-raleway font-black leading-tight mb-4'>
             <span className='relative inline-block'>
               <span className='relative z-10'>60-80%</span>
               <span className='absolute inset-x-0 bottom-0 h-5 bg-primary opacity-70 left-[-1%] right-[-3%]'></span>
@@ -173,7 +173,7 @@ export default function Home() {
         <div className='uppercase tracking-widest font-bold opacity-60 text-sm mb-2'>
           resources
         </div>
-        <div className='text-3xl font-outfit font-extrabold leading-tight mb-4'>
+        <div className='text-3xl font-raleway font-black leading-tight mb-4'>
           Not Just a Challenge, It&apos;s a{" "}
           <span className='relative inline-block'>
             <span className='relative z-10'>YouTube Shortcut</span>
@@ -201,7 +201,7 @@ export default function Home() {
           <div className='uppercase tracking-widest font-bold opacity-60 text-sm mb-2'>
             pricing
           </div>
-          <div className='text-3xl font-outfit font-extrabold leading-tight mb-4'>
+          <div className='text-3xl font-raleway font-black leading-tight mb-4'>
             Depends on{" "}
             <span className='relative inline-block'>
               <span className='relative z-10'>How Lazy</span>
@@ -220,7 +220,7 @@ export default function Home() {
       <section className='max-w-3xl mx-auto px-6 py-6'>
         <div className='font-lora opacity-80 flex md:flow-row max-md:flex-col md:justify-between max-md:space-y-4 text-center'>
           <div className='md:text-left'>
-            <div className='font-outfit font-bold'>2 Weeks, 2 Videos</div>
+            <div className='font-raleway font-bold'>2 Weeks, 2 Videos</div>
             <div>Become a YouTuber in Days, Not Weeks</div>
             <div>
               Made with 🍯 and 🐰 by{" "}
@@ -231,7 +231,7 @@ export default function Home() {
             </div>
           </div>
           <div className='md:text-right'>
-            <div className='uppercase tracking-widest font-bold opacity-80 text-sm font-outfit'>
+            <div className='uppercase tracking-widest font-bold opacity-80 text-sm font-raleway'>
               legal
             </div>
             <div>Privacy Policy</div>

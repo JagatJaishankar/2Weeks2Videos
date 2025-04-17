@@ -1,5 +1,5 @@
 // import { Geist, Geist_Mono } from "next/font/google";
-import { Lora, Outfit } from "next/font/google";
+import { Lora, Raleway } from "next/font/google";
 import "./globals.css";
 
 // const geistSans = Geist({
@@ -17,8 +17,8 @@ const lora = Lora({
   subsets: ["latin"],
 });
 
-const outfit = Outfit({
-  variable: "--font-outfit",
+const raleway = Raleway({
+  variable: "--font-raleway",
   subsets: ["latin"],
 });
 
@@ -29,8 +29,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-theme="yellowmadethis">
-      <body className={`${lora.variable} ${outfit.variable} antialiased`}>
+    <html lang='en' data-theme='yellowmadethis'>
+      <body className={`${lora.variable} ${raleway.variable} antialiased`}>
         {children}
       </body>
     </html>

@@ -36,9 +36,11 @@
 }
 
 .font-lora {
-  font-family: "lora";
+  font-family: "Lora", serif;
 }
 
-.font-outfit {
-  font-family: "outfit";
+.font-raleway {
+  font-family: "Raleway", sans-serif;
+  font-variant-ligatures: contextual;
+  font-feature-settings: "liga" 1, "calt" 1;
 }
