@@ -1,9 +1,13 @@
+import Link from "next/link";
+
 const OverviewButton = (props) => {
   return (
-    <div>
-      <button className='btn btn-primary text-lg font-raleway font-extrabold shadow-md'>
-        {props.label}
-      </button>
+    <div className='text-center'>
+      <Link href={"/overview"}>
+        <button className='btn btn-primary text-lg font-raleway font-extrabold shadow-md'>
+          {props.label}
+        </button>
+      </Link>
     </div>
   );
 };

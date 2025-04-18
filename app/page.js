@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import OverviewButton from "./components/OverviewButton";
 
@@ -9,9 +10,11 @@ export default function Home() {
       <section className='max-w-3xl mx-auto px-6 pt-3'>
         <div className='navbar bg-base-200 shadow-md rounded-2xl'>
           <div className='flex-1'>
-            <a className='btn btn-ghost text-4xl font-raleway font-black'>
+            <Link
+              href={"/"}
+              className='btn btn-ghost text-4xl font-raleway font-black'>
               2W2V
-            </a>
+            </Link>
           </div>
           <div className='flex-none font-lora opacity-80 md:block hidden'>
             <ul className='menu menu-horizontal px-1'>
@@ -68,7 +71,7 @@ export default function Home() {
         </div>
         <div className='font-lora text-lg opacity-80 mb-12'>
           Everything you need to build your channel or personal brand&mdash;
-          <span className='font-extrabold'>includes motivation</span>
+          <span className='font-extrabold italic'>includes motivation</span>
         </div>
         <OverviewButton label='Challenge Overview' />
       </section>
@@ -191,6 +194,7 @@ export default function Home() {
           alt='YouTube Resource For Channel Growth'
           className='rounded-2xl shadow-md mx-auto mb-12'
           quality={50}
+          unoptimized
           priority={true}
         />
         <OverviewButton label='Take The Shortcut' />
