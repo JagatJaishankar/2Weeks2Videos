@@ -81,6 +81,7 @@ export default function Overview() {
           </div>
         </div>
       </section>
+
       {/* Title */}
       <section className='max-w-3xl mx-auto px-6 py-32 text-center'>
         <div className='font-raleway font-black max-md:text-4xl text-5xl leading-tight mb-4'>
@@ -97,10 +98,10 @@ export default function Overview() {
             invest in your future self today
           </span>
         </div>
-        <AcceptButton label='Take the First Step' />
       </section>
+
       {/* Blueprint */}
-      <section className='bg-base-200 px-6 py-32' id='journey'>
+      <section className='bg-base-200 px-6 py-32' id='blueprint'>
         <div className='max-w-3xl mx-auto'>
           <div className='uppercase tracking-widest font-bold opacity-60 text-sm mb-2 text-center'>
             blueprint
@@ -350,10 +351,11 @@ export default function Overview() {
           </div>
         </div>
       </section>
+
       {/* Toolkit */}
       <section
         className='max-w-3xl mx-auto text-center px-6 py-32'
-        id='resources'>
+        id='toolkit'>
         <div className='uppercase tracking-widest font-bold opacity-60 text-sm mb-2'>
           toolkit
         </div>
@@ -369,15 +371,15 @@ export default function Overview() {
           <span className='font-bold'>Pay Just $14, Get It ALL Back</span>
         </div>
         <div className='flex flex-col space-y-1 font-lora justify-center mb-6'>
-          {toolkit.map((course, index) => (
+          {toolkit.map((tool, index) => (
             <div
               key={index}
               className='flex flex-row space-x-1 justify-center items-center'>
               <div>{checkMark}</div>
               <div>
-                {course.title} &mdash;{" "}
+                {tool.title} &mdash;{" "}
                 <span className='font-raleway font-extrabold sm:text-lg'>
-                  {course.price}
+                  {tool.price}
                 </span>
               </div>
             </div>
@@ -392,8 +394,9 @@ export default function Overview() {
         </div>
         <AcceptButton label='Get Everything Now' />
       </section>
+
       {/* Decision */}
-      <section className='bg-base-200 px-6 py-32' id='journey'>
+      <section className='bg-base-200 px-6 py-32' id='decision'>
         <div className='max-w-3xl mx-auto'>
           <div className='uppercase tracking-widest font-bold opacity-60 text-sm mb-2 text-center'>
             decision
@@ -419,13 +422,24 @@ export default function Overview() {
             <div className='sm:text-lg font-lora font-semibold mb-2'>
               🧠 The Smart YouTuber Pack
             </div>
-            <p className='mb-4 text-base text-base-content font-lora'>
+            <p className='mb-4 text-base text-base-content font-lora max-sm:hidden'>
               Struggling with ideas, scripting, or editing? This premium upgrade
               gives you the exact tools top YouTubers use to create faster, hook
               viewers instantly, and grow faster—without burning out or guessing
               what works.
             </p>
-            <ul className='list-disc list-inside space-y-2 text-base ml-2 font-lora'>
+            <p className='mb-4 text-base text-base-content font-lora sm:hidden'>
+              Struggling with video ideas, scripting, or editing? This pack
+              gives you the exact tools top YouTubers use to create faster, hook
+              viewers, and grow their channel—without the guesswork.
+            </p>
+            <p className='mb-4 text-base text-base-content font-lora sm:hidden'>
+              You&apos;ll get proven templates for titles, scripts, and
+              descriptions, AI-powered writing assistants, a library of editing
+              assets (overlays, transitions, SFX), and high-converting thumbnail
+              swipe files.
+            </p>
+            <ul className='list-disc list-inside space-y-2 text-base ml-2 font-lora max-sm:hidden'>
               <li>
                 <strong>Plug & play</strong> title, script & description
                 templates

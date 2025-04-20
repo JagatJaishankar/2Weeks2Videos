@@ -29,7 +29,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='en' data-theme='yellowmadethis'>
+    <html lang='en' data-theme='yellowmadethis' className='scroll-smooth'>
       <body className={`${lora.variable} ${raleway.variable} antialiased`}>
         {children}
       </body>
