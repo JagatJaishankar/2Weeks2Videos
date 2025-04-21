@@ -4,7 +4,7 @@ export default function VerifyRequest() {
   return (
     <main className='max-w-3xl mx-auto py-2 px-6'>
       <div className='pl-2 pt-6 mb-10'>
-        <Link href={"/login"} className='btn btn-ghost items-center'>
+        <Link href={"/api/auth/signin"} className='btn btn-ghost items-center'>
           <div>
             <svg
               xmlns='http://www.w3.org/2000/svg'

@@ -1,9 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+import { auth } from "@/auth";
+import { redirect } from "next/navigation";
 
 import OverviewButton from "./components/OverviewButton";
+import LoginButton from "./components/LoginButton";
 
-export default function Home() {
+export default async function Home() {
+  const session = await auth();
+  console.log(session);
+
   return (
     <main>
       {/* NavBar */}
@@ -29,7 +35,10 @@ export default function Home() {
               </li>
             </ul>
           </div>
-          <div className='dropdown dropdown-end max-md:block hidden'>
+          <div
+            className={`dropdown dropdown-end ${
+              session ? "hidden" : "max-md:block hidden"
+            }`}>
             <div tabIndex={0} role='button' className='btn btn-ghost mr-1'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -57,6 +66,7 @@ export default function Home() {
               </li>
             </ul>
           </div>
+          <LoginButton session={session} />
         </div>
       </section>
       {/* Hero Section */}
