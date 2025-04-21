@@ -60,7 +60,7 @@ export default function SignIn() {
                 />
               </label>
               <div className='validator-hint hidden font-lora'>
-                Enter valid email address
+                Enter a valid email address
               </div>
               <button
                 type='submit'
