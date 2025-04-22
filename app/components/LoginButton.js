@@ -16,7 +16,7 @@ export default function LoginButton({ session }) {
     <button
       className='btn btn-neutral font-raleway font-extrabold text-lg'
       onClick={() => {
-        signIn("email", { callbackUrl: "@/app/dashboard" });
+        signIn("email", { callbackUrl: "/dashboard" });
       }}>
       Get Started
     </button>
