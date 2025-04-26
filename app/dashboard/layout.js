@@ -13,7 +13,7 @@ export default async function PrivateDashboard({ children }) {
     <div className='drawer lg:drawer-open'>
       <input id='my-drawer-2' type='checkbox' className='drawer-toggle' />
       <div className='drawer-content flex flex-col items-center justify-center'>
-        <div className='absolute left-4 top-4 lg:hidden block'>
+        <div className='absolute left-1 top-2 lg:hidden block'>
           <label htmlFor='my-drawer-2' className='btn btn-ghost drawer-button'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -30,7 +30,7 @@ export default async function PrivateDashboard({ children }) {
             </svg>
           </label>
         </div>
-        <div className='max-lg:mt-12'>{children}</div>
+        <div className='max-lg:mt-10 px-6 py-2'>{children}</div>
       </div>
       <div className='drawer-side'>
         <label
