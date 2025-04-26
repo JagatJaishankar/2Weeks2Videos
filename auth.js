@@ -12,9 +12,6 @@ const config = {
     }),
   ],
   adapter: MongoDBAdapter(clientPromise),
-  // pages: {
-  //   signIn: "/signin", // this is the path to your custom sign-in page
-  // },
 };
 
 export const { handlers, signIn, signOut, auth } = NextAuth(config);
