@@ -117,7 +117,7 @@ export default async function Overview() {
               </li>
             </ul>
           </div>
-          <div className='dropdown dropdown-end max-md:block hidden'>
+          <div className='dropdown dropdown-end sm:hidden'>
             <div tabIndex={0} role='button' className='btn btn-ghost mr-1'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -133,7 +133,7 @@ export default async function Overview() {
                 />
               </svg>
             </div>
-            <ul className='menu dropdown-content bg-base-100 rounded-box z-1 w-36 p-2 shadow-md font-lora opacity-80'>
+            <ul className='menu dropdown-content bg-base-100 rounded-box z-1 w-40 p-2 shadow-md font-lora opacity-80'>
               <li className='link link-hover'>
                 <a href='#blueprint'>Blueprint</a>
               </li>
@@ -143,8 +143,12 @@ export default async function Overview() {
               <li className='link link-hover'>
                 <a href='#decision'>Decision</a>
               </li>
+              <LoginButton session={session} size='real-small' />
             </ul>
           </div>
+          <span className='max-sm:hidden'>
+            <LoginButton session={session} />
+          </span>
         </div>
       </section>
 

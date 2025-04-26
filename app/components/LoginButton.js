@@ -3,8 +3,15 @@
 import Link from "next/link";
 import { signIn } from "next-auth/react";
 
-export default function LoginButton({ session }) {
+export default function LoginButton({ session, size }) {
   if (session) {
+    if (size == "real-small") {
+      return (
+        <div className='btn btn-neutral font-lora font-bold'>
+          <Link href={"/dashboard"}>Dashboard</Link>
+        </div>
+      );
+    }
     return (
       <div className='btn btn-neutral font-raleway font-extrabold text-lg'>
         <Link href={"/dashboard"}>Welcome Back</Link>
@@ -12,6 +19,17 @@ export default function LoginButton({ session }) {
     );
   }
 
+  if (size == "real-small") {
+    return (
+      <button
+        className='btn btn-neutral font-lora font-bold'
+        onClick={() => {
+          signIn("email", { callbackUrl: "/dashboard" });
+        }}>
+        Get Started
+      </button>
+    );
+  }
   return (
     <button
       className='btn btn-neutral font-raleway font-extrabold text-lg'
