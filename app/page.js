@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { auth } from "@/auth";
-import { redirect } from "next/navigation";
 
 import OverviewButton from "./components/OverviewButton";
 import LoginButton from "./components/LoginButton";
+import FooterSection from "./components/FooterSection";
 
 export default async function Home() {
   const session = await auth();
@@ -68,6 +68,7 @@ export default async function Home() {
           <LoginButton session={session} />
         </div>
       </section>
+
       {/* Hero Section */}
       <section className='max-w-3xl mx-auto px-6 py-32 text-center'>
         <div className='font-raleway font-black max-md:text-4xl text-5xl leading-tight mb-4'>
@@ -84,6 +85,7 @@ export default async function Home() {
         </div>
         <OverviewButton label='Challenge Overview' />
       </section>
+
       {/* Journey */}
       <section className='bg-base-200 px-6 py-32' id='journey'>
         <div className='max-w-3xl mx-auto text-center'>
@@ -178,6 +180,7 @@ export default async function Home() {
           <OverviewButton label='Start Your Journey' />
         </div>
       </section>
+
       {/* YT Resource */}
       <section
         className='max-w-3xl mx-auto text-center px-6 py-32'
@@ -208,6 +211,7 @@ export default async function Home() {
         />
         <OverviewButton label='Take The Shortcut' />
       </section>
+
       {/* Pricing */}
       <section className='bg-base-200 px-6 py-32' id='pricing'>
         <div className='max-w-3xl mx-auto text-center'>
@@ -229,30 +233,9 @@ export default async function Home() {
           <OverviewButton label='Pay With Effort' />
         </div>
       </section>
+
       {/* Footer */}
-      <section className='max-w-3xl mx-auto px-6 py-6'>
-        <div className='font-lora opacity-80 flex md:flow-row max-md:flex-col md:justify-between max-md:space-y-4 text-center'>
-          <div className='md:text-left'>
-            <div className='font-raleway font-bold'>2 Weeks, 2 Videos</div>
-            <div>Become a YouTuber in Days, Not Weeks</div>
-            <div>
-              Made with 🍯 and 🐰 by{" "}
-              <span className='link link-active'>Jagat</span>
-            </div>
-            <div className='opacity-50'>
-              Copyright &copy; {new Date().getFullYear()}
-            </div>
-          </div>
-          <div className='md:text-right'>
-            <div className='uppercase tracking-widest font-bold opacity-80 text-sm font-raleway'>
-              legal
-            </div>
-            <div>Privacy Policy</div>
-            <div>Terms of Service</div>
-            <div>Refund Policy</div>
-          </div>
-        </div>
-      </section>
+      <FooterSection />
     </main>
   );
 }

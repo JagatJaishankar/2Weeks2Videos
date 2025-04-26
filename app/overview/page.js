@@ -1,7 +1,13 @@
 import Link from "next/link";
-import AcceptButton from "../components/AcceptButton";
+import { auth } from "@/auth";
 
-export default function Overview() {
+import AcceptButton from "../components/AcceptButton";
+import LoginButton from "../components/LoginButton";
+import FooterSection from "../components/FooterSection";
+
+export default async function Overview() {
+  const session = await auth();
+
   const checkMark = (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -24,6 +30,66 @@ export default function Overview() {
     { title: "High-Retention Scripting", price: "$129" },
     { title: "Thumbnail Mastery (3C Framework)", price: "$97" },
     { title: "SEO Optimisation Toolkit", price: "$127" },
+  ];
+
+  const timelineItems = [
+    {
+      day: "Day 01",
+      title: "Finding the Perfect Video Idea",
+      text: `Use the viral video formula to spark ideas, validate them instantly, 
+           and build a bank of high potential concepts—so you never run out of content.`,
+      side: "start",
+    },
+    {
+      day: "Day 02",
+      title: "Creating a Click-Worthy Thumbnail",
+      text: `Master the 3C framework to create thumbnails that demand clicks. 
+           Test variations, analyse performance, and swap them post launch to maximise views.`,
+      side: "end",
+    },
+    {
+      day: "Day 03",
+      title: "Writing a High-Retention Script",
+      text: `Hook viewers in the first second and keep them watching. 
+           Structure your content for maximum retention and lead them straight to your next video.`,
+      side: "start",
+    },
+    {
+      day: "Day 04",
+      title: "Filming Like a Pro",
+      subtitle: "(With Just Your Phone)",
+      text: `No fancy setup? No problem. Nail the perfect lighting, camera settings, and framing—your 
+           videos will look pro-level, no matter the device.`,
+      side: "end",
+    },
+    {
+      day: "Day 05",
+      title: "Editing for Maximum Retention",
+      text: `Keep every second engaging. Learn simple but powerful editing techniques to boost watch time 
+           without overcomplicating the process.`,
+      side: "start",
+    },
+    {
+      day: "Day 06",
+      title: "SEO & Video Optimization",
+      text: `Go beyond just uploading. Craft titles, descriptions, and tags that drive traffic—so your videos 
+           get discovered long after publishing.`,
+      side: "end",
+    },
+    {
+      day: "Day 07",
+      title: "Expanding Beyond YouTube",
+      text: `One video, endless reach. Repurpose content across Instagram, Twitter, and TikTok to grow without 
+           creating from scratch.`,
+      side: "start",
+    },
+    {
+      day: "Day 08 to 14",
+      title: "The Cycle Repeats",
+      text: `Success isn't one-and-done. Keep refining, experimenting, and improving. Each video gets better, 
+           every upload builds momentum, and soon, growth becomes inevitable.`,
+      side: "end",
+    },
   ];
 
   return (
@@ -115,236 +181,45 @@ export default function Overview() {
             of You
           </div>
           <div className='font-lora text-lg opacity-80 mb-6 text-center'>
-            Everything is planned out&mdash;you&apos;ll know exactly what to do
-            and how to do it
+            Everything is planned out—you&apos;ll know exactly what to do and
+            how to do it
           </div>
           <ul className='timeline timeline-snap-icon max-md:timeline-compact timeline-vertical'>
-            <li>
-              <div className='timeline-middle'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  viewBox='0 0 20 20'
-                  fill='currentColor'
-                  className='h-5 w-5'>
-                  <path
-                    fillRule='evenodd'
-                    d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z'
-                    clipRule='evenodd'
-                  />
-                </svg>
-              </div>
-              <div className='timeline-start mb-10 md:text-end'>
-                <time className='font-mono italic opacity-70'>Day 01</time>
-                <div className='text-xl font-raleway font-black'>
-                  Finding the Perfect Video Idea
+            {timelineItems.map((item, index) => (
+              <li key={index}>
+                {/* Only insert <hr /> before and after items except the first and last */}
+                {index !== 0 && <hr />}
+                <div className='timeline-middle'>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    viewBox='0 0 20 20'
+                    fill='currentColor'
+                    className='h-5 w-5'>
+                    <path
+                      fillRule='evenodd'
+                      d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z'
+                      clipRule='evenodd'
+                    />
+                  </svg>
                 </div>
-                <span className='font-lora'>
-                  Use the viral video formula to spark ideas, validate them
-                  instantly, and build a bank of high potential
-                  concepts&mdash;so you never run out of content.
-                </span>
-              </div>
-              <hr />
-            </li>
-            <li>
-              <hr />
-              <div className='timeline-middle'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  viewBox='0 0 20 20'
-                  fill='currentColor'
-                  className='h-5 w-5'>
-                  <path
-                    fillRule='evenodd'
-                    d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z'
-                    clipRule='evenodd'
-                  />
-                </svg>
-              </div>
-              <div className='timeline-end mb-10'>
-                <time className='font-mono italic opacity-70'>Day 02</time>
-                <div className='text-xl font-raleway font-black'>
-                  Creating a Click-Worthy Thumbnail
+                <div
+                  className={`timeline-${item.side} mb-10 ${
+                    item.side === "start" ? "md:text-end" : "md:text-start"
+                  }`}>
+                  <time className='font-mono italic opacity-70'>
+                    {item.day}
+                  </time>
+                  <div className='text-xl font-raleway font-black'>
+                    {item.title}
+                    {item.subtitle && (
+                      <div className='opacity-50 text-lg'>{item.subtitle}</div>
+                    )}
+                  </div>
+                  <span className='font-lora'>{item.text}</span>
                 </div>
-                <span className='font-lora'>
-                  Master the 3C framework to create thumbnails that demand
-                  clicks. Test variations, analyse performance, and swap them
-                  post launch to maximise views.
-                </span>
-              </div>
-              <hr />
-            </li>
-            <li>
-              <hr />
-              <div className='timeline-middle'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  viewBox='0 0 20 20'
-                  fill='currentColor'
-                  className='h-5 w-5'>
-                  <path
-                    fillRule='evenodd'
-                    d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z'
-                    clipRule='evenodd'
-                  />
-                </svg>
-              </div>
-              <div className='timeline-start mb-10 md:text-end'>
-                <time className='font-mono italic opacity-70'>Day 03</time>
-                <div className='text-xl font-raleway font-black'>
-                  Writing a High-Retention Script
-                </div>
-                <span className='font-lora'>
-                  Hook viewers in the first second and keep them watching.
-                  Structure your content for maximum retention and lead them
-                  straight to your next video.
-                </span>
-              </div>
-              <hr />
-            </li>
-            <li>
-              <hr />
-              <div className='timeline-middle'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  viewBox='0 0 20 20'
-                  fill='currentColor'
-                  className='h-5 w-5'>
-                  <path
-                    fillRule='evenodd'
-                    d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z'
-                    clipRule='evenodd'
-                  />
-                </svg>
-              </div>
-              <div className='timeline-end mb-10'>
-                <time className='font-mono italic opacity-70'>Day 04</time>
-                <div className='text-xl font-raleway font-black'>
-                  Filming Like a Pro <br />
-                  <span className='opacity-50 text-lg'>
-                    (With Just Your Phone)
-                  </span>
-                </div>
-                <span className='font-lora'>
-                  No fancy setup? No problem. Nail the perfect lighting, camera
-                  settings, and framing&mdash;your videos will look pro-level,
-                  no matter the device.
-                </span>
-              </div>
-              <hr />
-            </li>
-            <li>
-              <hr />
-              <div className='timeline-middle'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  viewBox='0 0 20 20'
-                  fill='currentColor'
-                  className='h-5 w-5'>
-                  <path
-                    fillRule='evenodd'
-                    d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z'
-                    clipRule='evenodd'
-                  />
-                </svg>
-              </div>
-              <div className='timeline-start mb-10 md:text-end'>
-                <time className='font-mono italic opacity-70'>Day 05</time>
-                <div className='text-xl font-raleway font-black'>
-                  Editing for Maximum Retention
-                </div>
-                <span className='font-lora'>
-                  Keep every second engaging. Learn simple but powerful editing
-                  techniques to boost watch time without overcomplicating the
-                  process.
-                </span>
-              </div>
-              <hr />
-            </li>
-            <li>
-              <hr />
-              <div className='timeline-middle'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  viewBox='0 0 20 20'
-                  fill='currentColor'
-                  className='h-5 w-5'>
-                  <path
-                    fillRule='evenodd'
-                    d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z'
-                    clipRule='evenodd'
-                  />
-                </svg>
-              </div>
-              <div className='timeline-end mb-10'>
-                <time className='font-mono italic opacity-70'>Day 06</time>
-                <div className='text-xl font-raleway font-black'>
-                  SEO & Video Optimization
-                </div>
-                <span className='font-lora'>
-                  Go beyond just uploading. Craft titles, descriptions, and tags
-                  that drive traffic&mdash;so your videos get discovered long
-                  after publishing.
-                </span>
-              </div>
-              <hr />
-            </li>
-            <li>
-              <hr />
-              <div className='timeline-middle'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  viewBox='0 0 20 20'
-                  fill='currentColor'
-                  className='h-5 w-5'>
-                  <path
-                    fillRule='evenodd'
-                    d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z'
-                    clipRule='evenodd'
-                  />
-                </svg>
-              </div>
-              <div className='timeline-start mb-10 md:text-end'>
-                <time className='font-mono italic opacity-70'>Day 07</time>
-                <div className='text-xl font-raleway font-black'>
-                  Expanding Beyond YouTube
-                </div>
-                <span className='font-lora'>
-                  One video, endless reach. Repurpose content across Instagram,
-                  Twitter, and TikTok to grow without creating from scratch.
-                </span>
-              </div>
-              <hr />
-            </li>
-            <li>
-              <hr />
-              <div className='timeline-middle'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  viewBox='0 0 20 20'
-                  fill='currentColor'
-                  className='h-5 w-5'>
-                  <path
-                    fillRule='evenodd'
-                    d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z'
-                    clipRule='evenodd'
-                  />
-                </svg>
-              </div>
-              <div className='timeline-end mb-10 md:text-start'>
-                <time className='font-mono italic opacity-70'>
-                  Day 08 to 14
-                </time>
-                <div className='text-xl font-raleway font-black'>
-                  The Cycle Repeats
-                </div>
-                <span className='font-lora'>
-                  Success isn&apos;t one-and-done. Keep refining, experimenting,
-                  and improving. Each video gets better, every upload builds
-                  momentum, and soon, growth becomes inevitable.
-                </span>
-              </div>
-            </li>
+                {index !== timelineItems.length - 1 && <hr />}
+              </li>
+            ))}
           </ul>
           <div className='text-center'>
             <AcceptButton label='Level Up Now' />
@@ -415,48 +290,23 @@ export default function Overview() {
             <h3 className='text-xl font-extrabold text-secondary mb-2 flex flex-row items-center space-x-2'>
               <input type='checkbox' className='checkbox checkbox-neutral' />{" "}
               <div className='font-raleway'>
-                Upgrade the Order <br className='hidden max-sm:block' />
-                for Just $37
+                Yes! Upgrade the Order for Just $37
               </div>
             </h3>
             <div className='sm:text-lg font-lora font-semibold mb-2'>
               🧠 The Smart YouTuber Pack
             </div>
-            <p className='mb-4 text-base text-base-content font-lora max-sm:hidden'>
-              Struggling with ideas, scripting, or editing? This premium upgrade
-              gives you the exact tools top YouTubers use to create faster, hook
-              viewers instantly, and grow faster—without burning out or guessing
-              what works.
-            </p>
-            <p className='mb-4 text-base text-base-content font-lora sm:hidden'>
+            <p className='mb-4 text-base text-base-content font-lora'>
               Struggling with video ideas, scripting, or editing? This pack
               gives you the exact tools top YouTubers use to create faster, hook
               viewers, and grow their channel—without the guesswork.
             </p>
-            <p className='mb-4 text-base text-base-content font-lora sm:hidden'>
+            <p className='mb-4 text-base text-base-content font-lora'>
               You&apos;ll get proven templates for titles, scripts, and
               descriptions, AI-powered writing assistants, a library of editing
               assets (overlays, transitions, SFX), and high-converting thumbnail
               swipe files.
             </p>
-            <ul className='list-disc list-inside space-y-2 text-base ml-2 font-lora max-sm:hidden'>
-              <li>
-                <strong>Plug & play</strong> title, script & description
-                templates
-              </li>
-              <li>
-                <strong>AI writing assistants</strong> trained to help you
-                script faster
-              </li>
-              <li>
-                A library of <strong>pro editing assets</strong> (transitions,
-                overlays, SFX)
-              </li>
-              <li>
-                Swipe files for <strong>high-converting thumbnails</strong>{" "}
-                (300+)
-              </li>
-            </ul>
             <p className='mt-4 text-base font-medium font-lora'>
               ✅ Check &quot;Yes&quot; above to add it to your order for just
               $37!
@@ -466,12 +316,17 @@ export default function Overview() {
               a game changer.
             </blockquote>
           </div>
-          <AcceptButton label='Accept Challenge' />
+          <div className='text-center'>
+            <LoginButton session={session} />
+          </div>
           <div className='font-lora opacity-50 mt-3 text-center'>
             Start Your YouTuber Journey Now!
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <FooterSection />
     </main>
   );
 }
