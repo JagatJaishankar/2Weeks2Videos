@@ -21,22 +21,27 @@ export default function LoginButton({ session, size }) {
 
   if (size == "real-small") {
     return (
+      <Link href={"/login"}>
+        <button
+          className='btn btn-neutral font-lora font-bold'
+          // onClick={() => {
+          //   signIn("email", { callbackUrl: "/dashboard" });
+          // }}
+        >
+          Get Started
+        </button>
+      </Link>
+    );
+  }
+  return (
+    <Link href={"/login"}>
       <button
-        className='btn btn-neutral font-lora font-bold'
+        className='btn btn-neutral font-raleway font-extrabold text-lg'
         onClick={() => {
           signIn("email", { callbackUrl: "/dashboard" });
         }}>
         Get Started
       </button>
-    );
-  }
-  return (
-    <button
-      className='btn btn-neutral font-raleway font-extrabold text-lg'
-      onClick={() => {
-        signIn("email", { callbackUrl: "/dashboard" });
-      }}>
-      Get Started
-    </button>
+    </Link>
   );
 }
