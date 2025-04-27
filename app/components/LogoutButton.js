@@ -4,11 +4,13 @@ import { signOut } from "next-auth/react";
 
 const LogoutButton = () => {
   return (
-    <button
-      className='btn btn-ghost font-raleway text-lg font-extrabold'
-      onClick={() => signOut()}>
-      Sign Out
-    </button>
+    <div className='text-center'>
+      <button
+        className='btn btn-ghost btn-active font-raleway text-lg font-extrabold'
+        onClick={() => signOut()}>
+        Sign Out
+      </button>
+    </div>
   );
 };
 
