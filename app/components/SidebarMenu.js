@@ -8,8 +8,8 @@ export default function SidebarMenu() {
 
   const links = [
     { href: "/dashboard", label: "2W2V Challenge" },
-    { href: "/dashboard/video-one", label: "Video #01" },
-    { href: "/dashboard/video-two", label: "Video #02" },
+    { href: "/dashboard/submit-video", label: "Submit Video" },
+    { href: "/dashboard/published-videos", label: "Published Videos" },
     { href: "/dashboard/request-refund", label: "Request Refund" },
     { href: "/dashboard/resources", label: "Challenge Blueprint" },
     { href: "/dashboard/smart-youtuber", label: "Smart YouTuber" },
