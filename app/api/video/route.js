@@ -70,3 +70,40 @@ export async function POST(req) {
     return NextResponse.json({ error: e.message }, { status: 500 });
   }
 }
+
+export async function DELETE(req) {
+  try {
+    const { searchParams } = req.nextUrl;
+    const videoId = searchParams.get("videoID");
+
+    if (!videoId) {
+      return NextResponse.json(
+        { error: "VideoID is required" },
+        { status: 400 }
+      );
+    }
+
+    const session = await auth();
+
+    if (!session) {
+      return NextResponse.json({ error: "Not authorised" }, { status: 401 });
+    }
+
+    await connectMongo();
+
+    await Video.deleteOne({
+      _id: videoId,
+      userID: session?.user?.id,
+    });
+
+    const user = await User.findById(session?.user?.id);
+    user.videos = user.videos.filter((id) => id.toString() !== videoId);
+    await user.save;
+
+    return NextResponse.json({});
+
+    return NextResponse.json({});
+  } catch (e) {
+    return NextResponse.json({ error: e.message }, { status: 500 });
+  }
+}
