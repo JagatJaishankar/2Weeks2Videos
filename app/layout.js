@@ -1,6 +1,7 @@
 // import { Geist, Geist_Mono } from "next/font/google";
 import { Lora, Raleway } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -31,6 +32,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en' data-theme='yellowmadethis' className='scroll-smooth'>
       <body className={`${lora.variable} ${raleway.variable} antialiased`}>
+        <div className='font-lora font-bold'>
+          <Toaster />
+        </div>
         {children}
       </body>
     </html>

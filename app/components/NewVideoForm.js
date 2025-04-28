@@ -1,9 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 const NewVideoForm = () => {
+  const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [title, setTitle] = useState("");
   const [url, setUrl] = useState("");
@@ -34,15 +37,20 @@ const NewVideoForm = () => {
         difficulty,
         manifest,
       });
-      console.log(data);
 
       setTitle("");
       setUrl("");
       setAbout("");
       setDifficulty(20);
       setManifest("");
+
+      toast.success("Video submitted");
+
+      router.push("/dashboard/published-videos");
     } catch (error) {
-      // display the error
+      const errorMessage =
+        error.response?.data?.error || error.message || "Something went wrong";
+      toast.error(errorMessage);
     } finally {
       setLoading(false);
     }
@@ -63,7 +71,6 @@ const NewVideoForm = () => {
           placeholder=''
           value={title}
           onChange={(event) => setTitle(event.target.value)}
-          required
         />
       </fieldset>
       <legend className='fieldset-legend font-lora text-sm opacity-60 mt-1'>
@@ -92,7 +99,6 @@ const NewVideoForm = () => {
           className='font-lora'
           value={url}
           onChange={(event) => setUrl(event.target.value)}
-          required
         />
       </label>
       <fieldset className='fieldset mt-2 w-full'>
@@ -102,8 +108,7 @@ const NewVideoForm = () => {
         <textarea
           className='textarea h-24 w-full font-lora'
           value={about}
-          onChange={(event) => setAbout(event.target.value)}
-          required></textarea>
+          onChange={(event) => setAbout(event.target.value)}></textarea>
       </fieldset>
       <legend className='fieldset-legend font-lora text-sm opacity-60 mt-1'>
         Rate your difficulty level
@@ -115,7 +120,6 @@ const NewVideoForm = () => {
         className='range range-sm w-full'
         value={difficulty}
         onChange={(event) => setDifficulty(Number(event.target.value))}
-        required
       />
       <fieldset className='fieldset mt-2 w-full'>
         <legend className='fieldset-legend font-lora text-sm opacity-60'>
@@ -124,8 +128,7 @@ const NewVideoForm = () => {
         <textarea
           className='textarea h-24 w-full font-lora'
           value={manifest}
-          onChange={(event) => setManifest(event.target.value)}
-          required></textarea>
+          onChange={(event) => setManifest(event.target.value)}></textarea>
       </fieldset>
       <button
         className='btn btn-primary font-extrabold text-lg font-raleway mt-4 w-full'
