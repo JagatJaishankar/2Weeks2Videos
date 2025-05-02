@@ -49,7 +49,7 @@ export async function POST(request) {
   if (user) {
     user.hasAccess = true;
     user.customerId = payload.data.attributes.customer_id;
-    user.isSmart = payload.meta.custom_data.isSmart === "true"; // convert from string to boolean
+    user.isSmart = payload.meta.custom_data.is_smart === "true";
     user.startTime = Date.now();
     await user.save();
   }
