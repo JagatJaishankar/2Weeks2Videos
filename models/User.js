@@ -6,6 +6,23 @@ const userSchema = new mongoose.Schema({
     trim: true,
     lowercase: true,
   },
+  name: {
+    type: String,
+    trim: true,
+  },
+  hasAccess: {
+    type: Boolean,
+    default: false,
+  },
+  customerId: {
+    type: String,
+  },
+  isSmart: {
+    type: Boolean,
+  },
+  startTime: {
+    type: Date,
+  },
   videos: [
     {
       type: mongoose.Schema.Types.ObjectId,
