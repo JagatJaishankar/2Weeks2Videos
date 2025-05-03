@@ -31,11 +31,8 @@ export default async function Dashboard() {
         })}
       </div>
       <CountdownTimer startTime={startTime} />
-      <div className='mt-2'>
+      <div className='mt-6'>
         <LogoutButton />
-      </div>
-      <div className='mt-2'>
-        <CheckoutButton />
       </div>
     </main>
   );

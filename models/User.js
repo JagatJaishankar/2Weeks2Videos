@@ -29,6 +29,12 @@ const userSchema = new mongoose.Schema({
       ref: "Video",
     },
   ],
+  refunds: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Refund",
+    },
+  ],
 });
 
 export default mongoose.models.User || mongoose.model("User", userSchema);

@@ -9,7 +9,7 @@ export default function ClientRedirect() {
     async function createCheckoutSession() {
       try {
         const response = await axios.post("/api/billing/create-checkout", {
-          successUrl: window.location.href + "/success",
+          successUrl: `${window.location.origin}/success`,
           cancelUrl: window.location.href,
         });
         const checkoutUrl = response.data.url;

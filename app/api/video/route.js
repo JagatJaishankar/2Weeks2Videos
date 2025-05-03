@@ -101,8 +101,6 @@ export async function DELETE(req) {
     await user.save;
 
     return NextResponse.json({});
-
-    return NextResponse.json({});
   } catch (e) {
     return NextResponse.json({ error: e.message }, { status: 500 });
   }

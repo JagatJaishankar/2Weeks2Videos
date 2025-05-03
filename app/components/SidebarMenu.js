@@ -23,7 +23,7 @@ export default function SidebarMenu() {
             href={href}
             className={`${
               pathname === href
-                ? "btn btn-neutral btn-active font-lora font-bold text-lg justify-start"
+                ? "btn btn-primary font-lora font-bold text-lg justify-start"
                 : "font-lora"
             }`}>
             {label}
