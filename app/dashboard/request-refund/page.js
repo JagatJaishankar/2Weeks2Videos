@@ -59,7 +59,7 @@ export default async function RequestRefund() {
           We have received your request!
         </div>
         <Image
-          src='https://media.giphy.com/media/RIhNQOjGa39Ze/giphy.gif?cid=ecf05e47bwt64vky2ta6msmaeh6nt6cuxbdsx7u26cbw9luk&ep=v1_gifs_related&rid=giphy.gif&ct=g' // Replace with your GIF URL
+          src='https://media.giphy.com/media/RIhNQOjGa39Ze/giphy.gif?cid=ecf05e47bwt64vky2ta6msmaeh6nt6cuxbdsx7u26cbw9luk&ep=v1_gifs_related&rid=giphy.gif&ct=g'
           alt='Form Submitted GIF'
           width={300}
           height={300}
