@@ -43,7 +43,7 @@ export default async function RequestRefund() {
           unoptimized={true}
         />
         <div className='font-lora text-lg text-center opacity-80 mt-6'>
-          Don't worry, we have more challenges coming up.
+          Don&apos;t worry, we have more challenges coming up.
         </div>
       </main>
     );
