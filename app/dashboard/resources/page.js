@@ -20,7 +20,7 @@ const data = [
     ),
     title: "Getting Started",
     subtitle: "Introduction to 2Weeks2Videos",
-    fileUrl: "/files/report-week-1.pdf",
+    fileUrl: "/files/Day-00-Getting-Started.pdf",
   },
   {
     dayNumber: 1,
@@ -41,7 +41,7 @@ const data = [
     ),
     title: "Idea Identification and Research",
     subtitle: "Viral video formula",
-    fileUrl: "/files/ui-kit.zip",
+    fileUrl: "/files/Day-01-Idea-and-Research.pdf",
   },
   {
     dayNumber: 2,
@@ -67,7 +67,7 @@ const data = [
     ),
     title: "Designing Thumbnail",
     subtitle: "Demanding the well-deserved click",
-    fileUrl: "/files/ui-kit.zip",
+    fileUrl: "/files/Day-02-Designing-The-Thumbnail.pdf",
   },
   {
     dayNumber: 3,
@@ -88,7 +88,7 @@ const data = [
     ),
     title: "High Retention Script",
     subtitle: "Maximising watchtime through retention",
-    fileUrl: "/files/ui-kit.zip",
+    fileUrl: "/files/Day-03-High-Retention-Script.pdf",
   },
   {
     dayNumber: 4,
@@ -114,7 +114,7 @@ const data = [
     ),
     title: "Filming With Smartphone",
     subtitle: "Mastering your smartphone camera",
-    fileUrl: "/files/ui-kit.zip",
+    fileUrl: "/files/Day-04-Filming-With-Smartphone.pdf",
   },
   {
     dayNumber: 5,
@@ -135,7 +135,7 @@ const data = [
     ),
     title: "High Retention Editing",
     subtitle: "Following priciple and being authentic",
-    fileUrl: "/files/ui-kit.zip",
+    fileUrl: "/files/Day-05-High-Retention-Editing.pdf",
   },
   {
     dayNumber: 6,
@@ -156,7 +156,7 @@ const data = [
     ),
     title: "SEO Optimisation & Scheduling",
     subtitle: "Mastering the art of YouTube finding you",
-    fileUrl: "/files/ui-kit.zip",
+    fileUrl: "/files/Day-06-SEO-Optimisation.pdf",
   },
   {
     dayNumber: 7,
@@ -177,7 +177,7 @@ const data = [
     ),
     title: "Social Media Teaser",
     subtitle: "Leveraging other platforms for growth",
-    fileUrl: "/files/ui-kit.zip",
+    fileUrl: "/files/Day-07-Social-Media-Teasers.pdf",
   },
   {
     dayNumber: 8,
@@ -198,7 +198,7 @@ const data = [
     ),
     title: "Content Repurposing",
     subtitle: "Maximising growth through socials",
-    fileUrl: "/files/ui-kit.zip",
+    fileUrl: "/files/Day-08-Content Repurposing.pdf",
   },
   {
     dayNumber: 9,
@@ -219,7 +219,7 @@ const data = [
     ),
     title: "The Cycle Repeats",
     subtitle: "Blueprint from day 09 to day 14",
-    fileUrl: "/files/ui-kit.zip",
+    fileUrl: "/files/Day-09-14.pdf",
   },
 ];
 

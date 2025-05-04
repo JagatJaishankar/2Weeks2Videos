@@ -67,7 +67,7 @@ export default async function RequestRefund() {
           unoptimized={true}
         />
         <div className='font-lora text-lg text-center opacity-80 mt-6'>
-          You will hear back from us within 24 hours.
+          You will hear back from me within 24 hours.
         </div>
         <div className='font-lora opacity-60 text-center'>
           Feel free hit me up{" "}
