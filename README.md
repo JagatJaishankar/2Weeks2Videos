@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 2Weeks2Videos
 
-## Getting Started
+> 2Weeks2Videos is an accountability SaaS that turns your content goals into a simple, high‑stakes challenge.
 
-First, run the development server:
+<img width="800" alt="Screenshot 2026-02-12 at 23 54 54" src="https://github.com/user-attachments/assets/ec5b49ea-04c5-4414-b3b7-bd0e56577c6c" />
+<img width="800" alt="Screenshot 2026-02-12 at 23 52 58" src="https://github.com/user-attachments/assets/4252a7cb-ca25-44ae-bc35-5afd9c7b23c7" />
+<img width="800" alt="Screenshot 2026-02-12 at 23 56 15" src="https://github.com/user-attachments/assets/612cbe9d-1aed-4c4f-9943-bb6b2aada161" />
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## The Problem
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+*Most aspiring YouTubers promise themselves they’ll “start posting consistently” and never follow through. They upload once, get low views, lose motivation, and quietly abandon their channel. There’s no real accountability or consequence for missing their own goals, so procrastination always wins.*
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## The Solution
 
-## Learn More
+*2Weeks2Videos turns content goals into a simple, high‑stakes challenge. Creators put down a $14 deposit, commit to shipping 2 YouTube videos in 14 days, and either deliver on time or lose their money. By adding real consequences and a clear deadline, it removes excuses and makes consistency non‑negotiable.*
 
-To learn more about Next.js, take a look at the following resources:
+## Key Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Challenge On-Boarding** — Set your YouTube goal, pay a $14 deposit, and lock in your 14‑day challenge window.
+- **Progress Tracking** — See your active challenge status and deadlines so you always know how many videos are left to ship.
+- **Proof of Upload** — Submit video links as proof to mark each video as completed within the challenge period.
+- **Payout Logic** — Automatically determine if the creator finished on time and whether their $14 gets refunded or forfeited.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Tech Stack
 
-## Deploy on Vercel
+| Category | Technology |
+|----------|-----------|
+| Frontend | Next.js, React, Tailwind CSS (w/ DaisyUI) |
+| Backend | Next.js, Node.js |
+| Database | NoSQL / MongoDB |
+| Auth | NextAuth.js |
+| Payments | LemonSqueezy (Dummy Payments) |
+| Deployment | Vercel |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Live Demo
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🔗 **[Try it live →](2weeks2videos.vercel.app)**
+
+---
+
+Built by [Jagat Jaishankar](https://jagatjaishankar.com) · [Twitter](https://x.com/JaishankarJagat) · [LinkedIn](https://linkedin.com/in/jagatjaishankar)
