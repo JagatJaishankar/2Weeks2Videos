@@ -3,20 +3,19 @@
 import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 const CheckoutButton = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
 
   const handleSubscribe = async () => {
     if (isLoading) return;
     setIsLoading(true);
     try {
-      const response = await axios.post("/api/billing/create-checkout", {
-        successUrl: window.location.href + "/success",
-        cancelUrl: window.location.href,
-      });
-      const checkoutUrl = response.data.url;
-      window.location.href = checkoutUrl;
+      await axios.post("/api/billing/grant-access");
+      toast.success("Payment successful!");
+      router.push("/success");
     } catch (error) {
       const errorMessage =
         error.response?.data?.error || error.message || "Something went wrong";
