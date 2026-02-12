@@ -40,6 +40,18 @@ export async function POST(req) {
       }
     );
 
+    console.log("LemonSqueezy response:", JSON.stringify(checkoutLS, null, 2));
+
+    if (checkoutLS.error) {
+      console.error("LemonSqueezy error:", checkoutLS.error);
+      return NextResponse.json({ error: checkoutLS.error.message }, { status: 400 });
+    }
+
+    if (!checkoutLS.data?.data?.attributes?.url) {
+      console.error("Unexpected response structure:", checkoutLS);
+      return NextResponse.json({ error: "Invalid response from payment provider" }, { status: 500 });
+    }
+
     return NextResponse.json({ url: checkoutLS.data.data.attributes.url });
   } catch (e) {
     return NextResponse.json({ error: e.message }, { status: 500 });
