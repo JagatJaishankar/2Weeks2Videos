@@ -36,7 +36,7 @@
 
 ## Live Demo
 
-🔗 **[Try it live →](2weeks2videos.vercel.app)**
+🔗 **[Try it live →](https://2weeks2videos.vercel.app)**
 
 ---
 
