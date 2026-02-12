@@ -26,8 +26,8 @@ export async function POST(req) {
     lemonSqueezySetup({ apiKey: process.env.LS_API_KEY });
 
     const checkoutLS = await createCheckout(
-      process.env.LS_STORE_ID,
-      process.env.LS_VARIANT_ID_SMART,
+      Number(process.env.LS_STORE_ID),
+      Number(process.env.LS_VARIANT_ID_SMART),
       {
         productOptions: { redirectUrl: body.successUrl },
         checkoutData: {
@@ -39,6 +39,10 @@ export async function POST(req) {
         },
       }
     );
+
+    if (checkoutLS.error) {
+      return NextResponse.json({ error: checkoutLS.error.message }, { status: 400 });
+    }
 
     return NextResponse.json({ url: checkoutLS.data.data.attributes.url });
   } catch (e) {
