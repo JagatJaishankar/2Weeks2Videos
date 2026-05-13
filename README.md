@@ -1,44 +1,43 @@
-# Sora Solutions
+# 2Weeks2Videos
 
-> Sora Solutions is a modern AI agency website built to showcase automation services for businesses in a clear, credible, and conversion-focused way.
+> 2Weeks2Videos is an accountability SaaS that turns your content goals into a simple, high‑stakes challenge.
 
-<img width="800" alt="Screenshot 2026-05-13 at 6 08 01 PM" src="https://github.com/user-attachments/assets/e7c9ef20-32e5-4d80-a953-537202eac8e1" />
-<img width="800" alt="Screenshot 2026-05-13 at 6 08 36 PM" src="https://github.com/user-attachments/assets/33469e39-3fb4-4d4c-ace7-04486873ca36" />
-<img width="800" alt="Screenshot 2026-05-13 at 6 09 53 PM" src="https://github.com/user-attachments/assets/ecd4a0bf-54b5-4b6e-89a9-9d1b21587722" />
-<img width="800" alt="Screenshot 2026-05-13 at 6 10 19 PM" src="https://github.com/user-attachments/assets/1ae8bffd-7791-417c-9506-5f2cacba0ecf" />
-
+<img width="800" alt="Screenshot 2026-02-12 at 23 54 54" src="https://github.com/user-attachments/assets/ec5b49ea-04c5-4414-b3b7-bd0e56577c6c" />
+<img width="800" alt="Screenshot 2026-02-12 at 23 52 58" src="https://github.com/user-attachments/assets/4252a7cb-ca25-44ae-bc35-5afd9c7b23c7" />
+<img width="800" alt="Screenshot 2026-02-12 at 23 56 15" src="https://github.com/user-attachments/assets/612cbe9d-1aed-4c4f-9943-bb6b2aada161" />
 
 ---
 
 ## The Problem
 
-*Many businesses want to use AI and automation to save time, reduce repetitive work, and improve operations, but they don’t know where to start or who to trust. Most agency websites either feel too vague, too generic, or too technical, which makes it harder for potential clients to quickly understand the value of the service.*
+*Most aspiring YouTubers promise themselves they’ll “start posting consistently” and never follow through. They upload once, get low views, lose motivation, and quietly abandon their channel. There’s no real accountability or consequence for missing their own goals, so procrastination always wins.*
 
 ## The Solution
 
-*Sora Solutions is a professional agency website designed to clearly present AI automation services in a way that feels modern, trustworthy, and easy to understand. It gives businesses a clean entry point to explore what the agency offers, how automation can help their workflow, and why working with a specialized partner can accelerate implementation.*
+*2Weeks2Videos turns content goals into a simple, high‑stakes challenge. Creators put down a $14 deposit, commit to shipping 2 YouTube videos in 14 days, and either deliver on time or lose their money. By adding real consequences and a clear deadline, it removes excuses and makes consistency non‑negotiable.*
 
 ## Key Features
 
-- **Modern Agency Landing Page** — Presents the business with a polished and premium web presence.
-- **Clear Service Breakdown** — Explains AI automation offerings in simple, client-friendly sections.
-- **Conversion-Focused Structure** — Guides visitors toward taking action through strategic layout and call-to-action placement.
-- **Responsive Design** — Delivers a consistent experience across desktop and mobile devices.
-- **Trust-Oriented Presentation** — Uses clean UI, strong hierarchy, and modern branding to build credibility.
+- **Challenge On-Boarding** — Set your YouTube goal, pay a $14 deposit, and lock in your 14‑day challenge window.
+- **Progress Tracking** — See your active challenge status and deadlines so you always know how many videos are left to ship.
+- **Proof of Upload** — Submit video links as proof to mark each video as completed within the challenge period.
+- **Payout Logic** — Automatically determine if the creator finished on time and whether their $14 gets refunded or forfeited.
 
 ## Tech Stack
 
 | Category | Technology |
 |----------|-----------|
-| Frontend | Next.js, React, Tailwind CSS |
-| Backend | Next.js |
+| Frontend | Next.js, React, Tailwind CSS (w/ DaisyUI) |
+| Backend | Next.js, Node.js |
+| Database | NoSQL / MongoDB |
+| Auth | NextAuth.js |
+| Payments | LemonSqueezy (Dummy Payments) |
 | Deployment | Vercel |
 
 ## Live Demo
 
-🔗 **[Try it live →](https://sora-solutions.vercel.app/)**
+🔗 **[Try it live →](https://2weeks2videos.vercel.app)**
 
 ---
 
 Built by [Jagat Jaishankar](https://jagatjaishankar.com) · [Twitter](https://x.com/JaishankarJagat) · [LinkedIn](https://linkedin.com/in/jagatjaishankar)
-
